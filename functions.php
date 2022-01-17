@@ -1,4 +1,4 @@
-<?php echo 'aaaaaaaaaaa';
+<?php echo 'aaaaaaaaaaa'; die;
 /**
  * Functions and definitions
  *
