@@ -1,4 +1,4 @@
-<?php echo 'bbbbbbbbbbbb'; die;
+<?php echo 'ccccccccccccc'; die;
 /**
  * Functions and definitions
  *
