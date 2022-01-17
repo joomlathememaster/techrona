@@ -3,6 +3,7 @@
  * Functions and definitions
  *
  */
+die ('sdfsdf');
 if(!defined('DEV_MODE')){
     define('DEV_MODE', true);
 }
