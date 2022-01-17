@@ -1,0 +1,15 @@
+$menu_item_space: 45px;
+$sub_menu_w: 230px;
+$menu_arrows_down: '\e91d';
+$menu_arrows_up: '\e920';
+$menu_arrow_size: 10px;
+$menu_item_icon: "\e90d";
+$menu_item_icon_rtl: "\e90c";
+$dropdown_radius: 10px;
+$dropdown_bg_img: url(../images/dropdown-shadow.png);
+
+@import 'menu_main';
+@import 'menu_mega';
+@import 'menu_mobile';
+@import 'menu_inner';
+@import 'menu_widescreen';

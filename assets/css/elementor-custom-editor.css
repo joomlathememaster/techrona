@@ -1,0 +1,14 @@
+#elementor-panel-categories {
+	display: flex;
+	flex-wrap: wrap;
+}
+#elementor-panel-categories > div {
+	flex: 0 0 100%;
+	width: 100%;
+}
+#elementor-panel-category-elementor-theme-core {
+	order: -10;
+}
+.elementor-control-type-repeater.elementor-repeater-has-minimum-rows .elementor-repeater-tool-remove{
+	display: table-cell !important;
+}

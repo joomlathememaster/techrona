@@ -1,0 +1,126 @@
+// Button
+.wp-block-button{
+	margin-bottom: 20px;
+	&.is-style-squared{
+		.wp-block-button__link{
+			border-radius: 0;
+		}
+	}
+}
+// Cover
+.wp-block-cover{
+	color: $white;
+}
+// paraggraph
+.single-post p{
+	&[class],
+	&[style]{
+		line-height: normal;
+		clear: both;
+		overflow: hidden;
+	}	
+}
+// Block
+[class*="wp-block-"]{
+	margin-bottom: 30px;
+	&:first-child{
+		margin-top: 0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+.kng-sidebar-area{
+	[class*="wp-block-"]{
+		margin-top: 0;
+		margin-bottom: 0;
+		&:first-child{
+			margin-top: 0;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.wp-block-latest-comments{
+		margin-bottom: -20px !important;
+	}
+	.wp-block-latest-comments{
+		[class*="wp-block-"]{
+		    padding-top: 3px;
+		    padding-bottom: 3px;
+		    line-height: 1.5;
+		}
+	}
+	.widget_block{
+		h2{
+            margin-top: 0;
+            margin-bottom: 35px;
+            padding-bottom: 22px;
+            position: relative;
+            border-bottom: 1px solid $border_color;
+            &:before{
+                content: '';
+                width: 55px;
+                height: 2px;
+                background-color: $primary_color;
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+            }
+        }
+	    ul{
+	        margin: 0;
+	    }
+	    li > a{
+	        display: flex;
+	        flex-wrap: wrap;
+	        align-items: center;
+	        position: relative;
+	        font-size: 17px;
+	        line-height: 40px;
+	        font-weight: 500;
+	    }
+	     
+	    .wp-block-latest-posts__list{
+	        margin-bottom: -20px;
+	    }
+	}
+}
+// Block Group 
+.wp-block-group{
+	&.has-background{
+		padding: 15px 20px;
+	}
+	.wp-block-button + *{
+		padding-top: 15px;
+	}
+}
+// RSS
+.wp-block-rss{
+	list-style: none;
+}
+
+.wp-block-table .has-fixed-layout{
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+// Gallery 
+.blocks-gallery-caption {margin-bottom: 30px;}
+.wp-caption.alignright{margin-bottom: 0!important;}
+
+.wp-block-quote br{
+	display: none;
+}
+.kng-sidebar-area .wp-block-latest-comments{
+	li{
+		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.kng-sidebar-area .wp-block-latest-comments [class*="wp-block-"]{
+	padding-top: 0;
+	padding-bottom: 0;
+}

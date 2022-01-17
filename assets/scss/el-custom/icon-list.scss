@@ -1,0 +1,55 @@
+.kng-icon-list{
+	.el-inline-items{
+		@include d-flex();
+	}
+	.el-list-items{
+		margin: 0;
+		
+		list-style-type: none;
+	}
+	.el-icon-list-icon{
+		i{
+			width: 1.25em;
+		}	
+		.icon{
+			display: inline-block;
+		}	
+	}
+	.el-icon-list-item{
+		position: relative;	
+		&:after{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		&.el-inline-item{
+			@include d-flex();
+			&:after{
+				width: auto;
+				left: auto;
+				position: relative;
+			}
+		}
+	}
+	.el-inline-items{
+		margin-left: -8px;
+		margin-right: -8px;
+		.el-icon-list-item{
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+	}
+	.el-icon-list-item,
+	.el-icon-list-item a{
+		@include d-flex();
+		align-items: center;
+		flex-wrap: nowrap;
+	}
+	.el-icon-list-icon i,
+	.el-icon-list-text{
+		@include transition(all 350ms linear);
+	}
+}

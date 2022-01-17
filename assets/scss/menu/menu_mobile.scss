@@ -1,0 +1,120 @@
+
+.kng-nav-menu-mobile{
+	ul,ol{
+		list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    li{
+	    	position: relative;
+    		padding: 0;
+	    }
+	} 
+} 
+ 
+.kng-mobile-menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+	> li{
+		color: $mobile_menu_regular;
+		position: relative;
+		>a{
+			padding: 10px 0;
+			color: $mobile_menu_regular;
+			font-size: $mobile_menu_font_size;
+			font-weight: $mobile_menu_font_weight;
+			display: inline-block;
+			text-transform: $mobile_menu_text_transform;
+			background-color: $mobile_menu_item_bg;
+		}
+	}
+	.menu-item:hover,
+	.menu-item:active,
+	.current-menu-item,
+	.current-menu-ancestor{
+		color: $mobile_menu_hover;
+		> a{
+			color: $mobile_menu_hover;
+			background-color: $mobile_menu_item_bg_hover;
+		}
+	}
+	.menu-item:active{
+		color: $mobile_menu_active;
+		> a{
+			color: $mobile_menu_active;
+			background-color: $mobile_menu_item_bg_hover;
+		}
+	}
+	.sub-menu{
+		display: none;
+		list-style: none;
+		.menu-item{
+			color: $mobile_submenu_regular;
+			>a{
+				padding: 5px 0;
+				display: inline-block;
+				color: $mobile_submenu_regular;
+				font-size: $mobile_submenu_font_size;
+				font-weight: $mobile_submenu_font_weight;
+				background-color: $mobile_submenu_item_bg;
+				font-family: $mobile_submenu_font_family;
+				text-transform: $mobile_submenu_text_transform;
+			}
+		} 
+		.menu-item:hover,
+		.current-menu-item,
+		.current-menu-ancestor{
+			color: $mobile_submenu_hover;
+			> a{
+				color: $mobile_submenu_hover;
+				background-color: $mobile_submenu_item_bg_hover;
+			}
+		} 
+		.menu-item:active{
+			color: $mobile_submenu_active;
+			> a{
+				color: $mobile_submenu_active;
+				background-color: $mobile_submenu_item_bg_hover;
+			}
+		}
+		.kng-heading-wrap{
+			display: none;
+		}
+		.elementor-column, 
+		.elementor-column{
+			width: 100% !important;
+		}
+		.elementor .elementor-section.elementor-section-boxed > .elementor-container.elementor-column-gap-default > .elementor-column > .elementor-element-populated{
+			padding: 0;
+		}
+		.elementor-section .kng-nav-menu-inner .kng-nav-inner li{
+			padding: 0;
+		}
+	}
+	.main-menu-toggle {
+        cursor: pointer;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+        position: absolute;
+        right: -6px;
+        text-align: center;
+        top: 14px;
+        background-color: transparent;
+        @include border-radius(4px 4px 0 4px);
+        @include transition(all 300ms linear 0ms);
+        &:before {
+            @include font-kngi($menu_arrows_down);
+        }
+		&.open:before{
+	    	@include font-kngi($menu_arrows_up);
+	    }
+    }
+    .sub-menu{
+    	.main-menu-toggle {
+    		top: 9px;
+    	}
+    }
+}

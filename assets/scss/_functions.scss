@@ -1,0 +1,407 @@
+
+$grid_bps_min_key: (xs,sm,md,lg,xl,xxl,xxxl ) !default;
+$grid_bps_max_key: (xs,sm,md,lg,xl,xxl ) !default;
+
+$grid_bps_min_val: (0px,576px,768px,992px,1200px,1280px,1600px) !default;
+$grid_bps_max_val: (575px,767px,991px,1199px,1279px,1599px) !default;
+ 
+$margins_padding: (0,5,8,10,12,15,16,20,24,25,26,28,30,32,36,40,48,50,56);
+@each $key in $margins_padding {
+    .mb-#{$key}{
+        margin-bottom: #{$key}px;
+    }
+    .mt-#{$key}{
+        margin-top: #{$key}px;
+    }
+    .ml-#{$key}{
+        margin-left: #{$key}px;
+    }
+    .mr-#{$key}{
+        margin-right: #{$key}px;
+    }
+    .pb-#{$key}{
+        padding-bottom: #{$key}px;
+    }
+    .pt-#{$key}{
+        padding-top: #{$key}px;
+    }
+    .pl-#{$key}{
+        padding-left: #{$key}px;
+    }
+    .pr-#{$key}{
+        padding-right: #{$key}px;
+    } 
+}
+@each $mp_brp in $grid_bps_min_key{
+    @each $mp_brp_val in $grid_bps_min_val{
+        @if ($mp_brp == xs and $mp_brp_val == 0px) or ($mp_brp == sm and $mp_brp_val == 576px) or ($mp_brp == md and $mp_brp_val == 768px) or ($mp_brp == lg and $mp_brp_val == 992px) or ($mp_brp == xl and $mp_brp_val == 1200px) or ($mp_brp == xxl and $mp_brp_val == 1280px) or ($mp_brp == xxxl and $mp_brp_val == 1600px) {
+            @media screen and (min-width: $mp_brp_val){
+                @each $key in $margins_padding {
+                    .mb-#{$mp_brp}-#{$key}{
+                        margin-bottom: #{$key}px;
+                    }
+                    .mt-#{$mp_brp}-#{$key}{
+                        margin-top: #{$key}px;
+                    }
+                    .ml-#{$mp_brp}-#{$key}{
+                        margin-left: #{$key}px;
+                    }
+                    .mr-#{$mp_brp}-#{$key}{
+                        margin-right: #{$key}px;
+                    }
+                    .pb-#{$mp_brp}-#{$key}{
+                        padding-bottom: #{$key}px;
+                    }
+                    .pt-#{$mp_brp}-#{$key}{
+                        padding-top: #{$key}px;
+                    }
+                    .pl-#{$mp_brp}-#{$key}{
+                        padding-left: #{$key}px;
+                    }
+                    .pr-#{$mp_brp}-#{$key}{
+                        padding-right: #{$key}px;
+                    } 
+                }
+            }
+        }
+    }
+}
+ 
+
+$font_sizes: (13,16,20,22,24,32,36,40,42,50,56,60,80,110);
+@each $text_size in $font_sizes{
+    .text-#{$text_size}{
+        font-size: #{$text_size}px;
+    }
+}
+
+@each $mp_brp in $grid_bps_min_key{
+    @each $mp_brp_val in $grid_bps_min_val{
+        @if ($mp_brp == xs and $mp_brp_val == 0px) or ($mp_brp == sm and $mp_brp_val == 576px) or ($mp_brp == md and $mp_brp_val == 768px) or ($mp_brp == lg and $mp_brp_val == 992px) or ($mp_brp == xl and $mp_brp_val == 1200px) or ($mp_brp == xxl and $mp_brp_val == 1280px) or ($mp_brp == xxxl and $mp_brp_val == 1600px) {
+            @media screen and (min-width: $mp_brp_val){
+                @each $text_size in $font_sizes{
+                    .text-#{$mp_brp}-#{$text_size}{
+                        font-size: #{$text_size}px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+$font_weight: (300,400,500,600,700,800,900);
+@each $fw in $font_weight{
+    .font-#{$fw}{
+        font-weight: #{$fw};
+    }
+}
+
+@each $mp_brp in $grid_bps_min_key{
+    @each $mp_brp_val in $grid_bps_min_val{
+        @if ($mp_brp == xs and $mp_brp_val == 0px) or ($mp_brp == sm and $mp_brp_val == 576px) or ($mp_brp == md and $mp_brp_val == 768px) or ($mp_brp == lg and $mp_brp_val == 992px) or ($mp_brp == xl and $mp_brp_val == 1200px) or ($mp_brp == xxl and $mp_brp_val == 1280px) or ($mp_brp == xxxl and $mp_brp_val == 1600px) {
+            @media screen and (min-width: $mp_brp_val){
+                @each $fw in $font_weight{
+                    .font-#{$mp_brp}-#{$fw}{
+                        font-weight: #{$fw};
+                    }
+                }
+            }
+        }
+    }
+}
+
+$line_height: ('1','1-09090909091','1-3','1-375','1-5','1-777777','1-8','2-46153846154');
+$line_height_val: ('1','1.09090909091','1.3','1.375','1.5','1.777777','1.8','2.46153846154'); 
+
+@for $i from 1 through length($line_height) {
+    $item: nth($line_height, $i);
+    $item_val: nth($line_height_val, $i);
+    .lh-#{$item}{
+        line-height: #{$item_val};
+    }
+}
+
+@each $mp_brp in $grid_bps_min_key{
+    @each $mp_brp_val in $grid_bps_min_val{
+        @if ($mp_brp == xs and $mp_brp_val == 0px) or ($mp_brp == sm and $mp_brp_val == 576px) or ($mp_brp == md and $mp_brp_val == 768px) or ($mp_brp == lg and $mp_brp_val == 992px) or ($mp_brp == xl and $mp_brp_val == 1200px) or ($mp_brp == xxl and $mp_brp_val == 1280px) or ($mp_brp == xxxl and $mp_brp_val == 1600px) {
+            @media screen and (min-width: $mp_brp_val){
+                @for $i from 1 through length($line_height) {
+                    $item: nth($line_height, $i);
+                    $item_val: nth($line_height_val, $i);
+                    .lh-#{$mp_brp}-#{$item}{
+                        line-height: #{$item_val};
+                    }
+                }
+            }
+        }
+    }
+} 
+
+$theme_gutters: (0,5,8,10,12,15,16,18,20,24,25,30,40,50,60,70,80,90,100);
+@each $key in $theme_gutters {
+    .gutters-#{$key}{
+        margin-left: $key/-2px;
+        margin-right: $key/-2px;
+        > [class*='col']{
+            padding-left: $key/2px;
+            padding-right: $key/2px;
+        }
+        > *{
+            padding-left: $key/2px;
+            padding-right: $key/2px;
+        }
+    }
+    .gutters-#{$key}.gutters-grid{
+        margin: $key/-2px;
+        > [class*='col']{
+            padding: $key/2px;
+        }
+        > *{
+            padding: $key/2px;
+        }
+    }
+}
+@each $mp_brp in $grid_bps_min_key{
+    @each $mp_brp_val in $grid_bps_min_val{
+        @if ($mp_brp == xs and $mp_brp_val == 0px) or ($mp_brp == sm and $mp_brp_val == 576px) or ($mp_brp == md and $mp_brp_val == 768px) or ($mp_brp == lg and $mp_brp_val == 992px) or ($mp_brp == xl and $mp_brp_val == 1200px) or ($mp_brp == xxl and $mp_brp_val == 1280px) or ($mp_brp == xxxl and $mp_brp_val == 1600px) {
+            @media screen and (min-width: $mp_brp_val){
+                @each $gt in $theme_gutters{
+                    .gutters-#{$mp_brp}-#{$gt}{
+                        margin-left: $gt/-2px;
+                        margin-right: $gt/-2px;
+                        > [class*='col']{
+                            padding-left: $gt/2px;
+                            padding-right: $gt/2px;
+                        }
+                        > *{
+                            padding-left: $gt/2px;
+                            padding-right: $gt/2px;
+                        }
+                    }
+                    .gutters-#{$mp_brp}-#{$gt}.gutters-grid{
+                        margin: $gt/-2px;
+                        > [class*='col']{
+                            padding: $gt/2px;
+                        }
+                        > *{
+                            padding: $gt/2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@for $i from 1 through length($kng_theme_colors_key) {
+    $item: nth($kng_theme_colors_key, $i);
+    $item_val: nth($kng_theme_colors_val, $i);
+    .#{$item}-color{
+        color: $item_val;
+    }
+    .bg-#{$item}{
+        background-color: $item_val !important;
+    }
+    .bg-hover-#{$item}:hover{
+        background-color: $item_val !important;
+    }
+    .bd-#{$item}{
+        border-color: $item_val !important;
+    }
+    .bd-hover-#{$item}:hover{
+        border-color: $item_val !important;
+    }
+    .text-#{$item}{
+        color: $item_val;
+    }
+    .text-hover-#{$item}:hover,
+    .text-hover-#{$item}:active,
+    .text-hover-#{$item}:focus{
+        color: $item_val !important;
+    }
+    .btn-#{$item}{
+        background-color: $item_val;
+        border-color: $item_val;
+    }
+    .btn-hover-#{$item}:hover,
+    .btn-hover-#{$item}:active,
+    .btn-hover-#{$item}:focus{
+        background-color: $item_val !important;
+        border-color: $item_val !important;
+    }
+    .kng-swiper-dots-color-#{$item}{
+        .kng-swiper-dots .kng-swiper-pagination-bullet:before{
+            border-color: $item_val;
+        }
+    }
+    .kng-swiper-dots-color-hover-#{$item}{
+        .kng-swiper-dots .kng-swiper-pagination-bullet:hover:before,
+        .kng-swiper-dots .swiper-pagination-bullet-active:before{
+            border-color: $item_val !important;
+        }
+    }
+    
+}   
+  
+$rotate: (
+    '45',
+    '90',
+    '180',
+    '270',
+    '360'
+);
+@each $deg in $rotate{
+    .rotateX-#{$deg}{
+        @include transform(rotateX(#{$deg}deg));
+    }
+    .rotateY-#{$deg}{
+        @include transform(rotateY(#{$deg}deg));
+    }
+
+    .icon-rotateX-#{$deg}:before{
+        display: inline-block;
+        @include transform(rotateX(#{$deg}deg));
+    }
+    .icon-rotateY-#{$deg}:before{
+        display: inline-block;
+        @include transform(rotateY(#{$deg}deg));
+    }
+}
+
+$kng_boxshadow:(
+    '0px 3px 15.84px 0.16px rgba(61, 61, 61, 0.3)',
+    '0px 3px 15.84px 0.16px rgba(0, 0, 0, 0.3)'
+);
+@for $i from 1 through length($kng_boxshadow) {
+    .kng-shadow-#{$i}{
+        @include box-shadow($shadow);
+    }
+    .kng-hover-shadow-#{$i}:hover{
+        @include box-shadow($shadow);
+    }
+}
+
+$kng-positions :(0,5,10,15,20,25,30,35,40);
+@each $position in $kng-positions{
+    .kng-abs-t-#{$position} {
+        top: #{$position}px;
+    }
+    .kng-abs-r-#{$position} {
+        right: #{$position}px;
+        [dir="rtl"] &{
+            right: auto;
+            left: #{$position}px;
+        }
+    }
+    .kng-abs-b-#{$position} {
+        bottom: #{$position}px;
+    }
+    .kng-abs-l-#{$position} {
+        left: #{$position}px;
+        [dir="rtl"] &{
+            left: auto;
+            right: #{$position}px;
+        }
+    }
+}
+ 
+.kng-none{
+    display: none !important;
+}
+@media (min-width: 768px){
+    .kng-tb-none{
+        display: none !important;
+    }
+    .kng-tb-block{
+        display: block !important;
+    }
+}
+@media (min-width: 992px){
+    .kng-dt-none{
+        display: none !important;
+    }
+    .kng-dt-block{
+        display: block !important;
+    }
+}
+ 
+
+/* Social Color
+ * establish social media colors
+*/
+$facebook_color:     #3b5ea1;
+$google_color:       #e24d43;
+$twitter_color:      #2bb3fa;
+$youtube_color:      #df2926;
+$rss_color:          #ffa500;
+$skype_color:        #0ebaee;
+$yahoo_color:        #690a7b;
+$dribbble_color:     #ff70b7;
+$flickr_color:       #ff0084;
+$linkedin_color:     #087ec0;
+$vimeo_color:        #27bcf1;
+$pinterest_color:    #ee2c34;
+$github_color:       #3f91cb;
+$instagram_color:    #db944c;
+$tumblr_color:       #426d9b;
+$behance_color:      #1879fd;
+$stumbleupon_color:  #eb4924;
+$dropbox_color:      #17a3eb;
+$soundcloud_color:   #ff7e30;
+$lastfm_color:       #d6063e;
+$deviantart_color:   #6a8a7b;
+$digg_color:         #75788d;
+$xing_color:         #1a8e8c;
+$share_color:        #25a774;
+$wordpress_color:    #2187b5;
+$delicious_color:    #ff9233;
+$reddit_color:       #377bda;
+$apple_color:        #3dd0f5;
+$vk_color:           #4778ac;
+$android_color:      #a3c537;
+$amazon_color:       #fc9a06;
+$edge_color:         #327ec9;
+$vine_color:         #16cc91;
+  
+
+// svg
+.kng-svg{
+    vertical-align: middle;
+    @include transition();
+}
+.kng-svg path{
+    fill: $header_color;
+    @include transition();
+}
+.kng-svg:hover path{
+    fill: $primary_color;
+     
+}
+a:hover >.kng-svg path{
+    fill: $primary_color;
+     
+}
+a:hover > span >.kng-svg path{
+    fill: $primary_color;
+     
+}
+.kng-svg:active path{
+    fill: $primary_color;
+     
+}
+a:active >.kng-svg path{
+    fill: $primary_color;   
+}
+.kng-cart-toggle a:hover >.kng-svg path{
+    fill: none;
+    stroke: $primary_color;
+}
+.kng-cart-toggle:hover .kng-svg path{
+    fill: none;
+    stroke: $primary_color;
+}
+.bars:hover > svg{
+    fill: none;
+    stroke: $primary_color;
+}

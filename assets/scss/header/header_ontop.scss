@@ -1,0 +1,62 @@
+.header-ontop{
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: var(--ontop-bg);
+	.header-main-menu > .elementor-container{
+		background-color: transparent;
+		@include box-shadow(none);
+	}
+	//  menu
+	 
+	.kng-primary-menu{
+		// level 1
+		> li {
+			> a,
+			> .main-menu-toggle:before{
+				color: var(--ontop-regular);
+				&:hover{
+					color: var(--ontop-hover);
+				}
+			}
+			&:before{
+				background-color: var(--ontop-hover);
+			}
+
+			&:hover{
+				> a,
+				> .main-menu-toggle:before{
+					color: var(--ontop-hover);
+				}
+				&:before{
+					background-color: var(--primary-color);
+				}
+			}
+
+			&.current-menu-item,
+			&.current-menu-ancestor {
+				> a,
+				.main-menu-toggle:before{
+					color: var(--ontop-active);
+				}
+				&:before{
+					background-color: var(--primary-color);
+				}
+			}
+		}
+	}
+	.menu-color{
+		color: var(--ontop-regular);
+		&:hover{
+			color: var(--ontop-hover);
+		}
+	}
+	 
+	.btn{
+		&:active,&:hover, &:focus {
+            background-color: #fff;
+            border-color: transparent;
+            color: $second_color;
+        }
+	} 
+}

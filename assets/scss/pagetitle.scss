@@ -1,0 +1,170 @@
+.kng-pagetitle{
+	.container{
+    	z-index: 1;
+    }
+    .heading{
+    	color: inherit;
+    	margin: 0;
+    	text-transform: capitalize;
+    }
+    .kng-scroll{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        z-index: 1;
+        @include transform(translate(-50%, 50%));
+    }
+    .kng-page-title-overlay{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.kng-breadcrumb{
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.5;
+		.br-item{
+			flex: 0 0 auto;
+			max-width: 100%;
+			&:last-child{
+				.br-divider{
+					display: none!important;
+				}
+			}
+		}
+
+		.br-divider{
+			padding: 5px 8px;
+			font-size: 100%;
+			position: relative;
+			top: 2px;
+		}
+		.br-item+.br-item::before{
+			display: none;
+		}
+	}
+}
+.kng-pagetitle-default{
+	background-color: $ptitle_background_color;
+	background-image: $ptitle_background_image;
+    background-size: $ptitle_background_size;
+    background-position: $ptitle_background_position;
+    background-repeat: $ptitle_background_repeat;
+    background-attachment: $ptitle_background_attachment;
+    color: $ptitle_color;
+    padding-top: $ptitle_padding_top;
+    padding-bottom: $ptitle_padding_bottom;
+    @media (max-width: $sm_max){
+    	padding-top: $ptitle_mobile_padding_top;
+    	padding-bottom: $ptitle_mobile_padding_bottom;
+    }
+    .kng-page-title-overlay{
+    	background-color: $ptitle_overlay_rgba;
+    	@include background-horizontal($ptitle_gradient_bg_from,$ptitle_gradient_bg_to);
+    }
+    .kng-pagetitle-breadcrumb{
+		color: $ptitle_breadcrumb_regular;
+		a{
+			color: $ptitle_breadcrumb_active;
+			&:hover{
+				color: $ptitle_breadcrumb_hover;
+			}
+		}
+		.br-divider{
+			color: $ptitle_breadcrumb_regular;
+		}
+	}
+}
+
+
+.kng-pagetitle-product{
+	background-color: $product_ptitle_background_color;
+	background-image: $product_ptitle_background_image;
+    background-size: $product_ptitle_background_size;
+    background-position: $product_ptitle_background_position;
+    background-repeat: $product_ptitle_background_repeat;
+    background-attachment: $product_ptitle_background_attachment;
+    color: $product_ptitle_color;
+    padding-top: $product_ptitle_padding_top;
+    padding-bottom: $product_ptitle_padding_bottom;
+    .kng-page-title-overlay{
+    	background-color: $product_ptitle_overlay_rgba;
+    }
+    .kng-pagetitle-breadcrumb{
+		color: $product_ptitle_breadcrumb_regular;
+		a{
+			color: $product_ptitle_breadcrumb_active;
+			&:hover{
+				color: $product_ptitle_breadcrumb_hover;
+			}
+		}
+	}
+}
+ 
+.kng-post-title-layout{
+	padding-top: 120px;
+	padding-bottom: 97px;
+	a{
+		color: inherit;
+	}
+	.kng-post-cat{
+		display: block;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+	}
+	.kng-post-title{
+		max-width: 770px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 24px;
+	}
+	.date-author{
+		font-size: 14px;
+		line-height: 26px;
+		letter-spacing: 0.08em;
+	}
+}
+.kng-pagetitle-shop{
+	background-color: $shop_ptitle_background_color;
+	background-image: $shop_ptitle_background_image;
+    background-size: $shop_ptitle_background_size;
+    background-position: $shop_ptitle_background_position;
+    background-repeat: $shop_ptitle_background_repeat;
+    background-attachment: $shop_ptitle_background_attachment;
+    color: $shop_ptitle_color;
+    padding-top: $shop_ptitle_padding_top;
+    padding-bottom: $shop_ptitle_padding_bottom;
+    .kng-page-title-overlay{
+    	background-color: $shop_ptitle_overlay_rgba;
+    }
+    .kng-pagetitle-breadcrumb{
+		color: $shop_ptitle_breadcrumb_regular;
+		a{
+			color: $shop_ptitle_breadcrumb_active;
+			&:hover{
+				color: $shop_ptitle_breadcrumb_hover;
+			}
+		}
+	}
+}
+.kng-page-title-layout1{
+	
+}
+.kng-page-title-layout2{
+	
+} 
+.kng-page-title + .kng-breadcrumb{
+	margin-top: 7px;
+}
+.kng-breadcrumb + .kng-page-title{
+	margin-top: 7px;
+}
+ 

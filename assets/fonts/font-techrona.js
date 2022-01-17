@@ -1,0 +1,24 @@
+{
+    "icons":[
+        "angle-double-right",       
+        "caret-down",       
+        "calendar",       
+        "comments",       
+        "email",       
+        "eye",       
+        "facebook",       
+        "instagram",       
+        "linkedin",       
+        "user",       
+        "paper-plane",       
+        "paper-plane2",       
+        "phone-mes",       
+        "play",       
+        "pinterest",       
+        "search",
+        "search1",
+        "shopping-bag",
+        "twitter",
+        "volume-control-phone"
+    ]
+}

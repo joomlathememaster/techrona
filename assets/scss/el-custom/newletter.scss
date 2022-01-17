@@ -1,0 +1,26 @@
+.kng-newsletter{
+	.form-wrap{
+		@include d-flex();
+		flex-wrap: nowrap;
+		.tnp-email{
+			background-color: white;
+			height: 60px;
+			font-size: 14px;
+			font-weight: 400;
+			color: #555555;
+			&::placeholder{
+				font-size:inherit;
+				color: #bbbbbb;
+				font-weight: inherit;
+			}
+		}
+		.tnp-submit{
+			padding: 0;
+			min-width: 60px;
+			&:after{
+				@include font-kngi('\e916');
+				font-size: 24px;
+			}
+		}
+	}
+}	

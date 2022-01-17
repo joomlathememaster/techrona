@@ -1,0 +1,11 @@
+@font-face{
+    font-family:"Hotling";
+    src:url("../fonts/The-Hotling.otf") format("woff"),
+    url("../fonts/The-Hotling-Splatters.otf") format("opentype"),
+    url("../fonts/The-Hotling-Swash.otf") format("truetype");
+}
+ 
+.hotling-font{
+	font-family: 'Hotling';
+}
+ 

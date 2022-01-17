@@ -1,0 +1,184 @@
+/**
+ * Theme Option
+ */
+ #redux-header {
+ 	display: none !important;
+ }
+.redux-main .wp-picker-container {
+    display: inline-block;
+}
+.redux-main .color-transparency-check {
+    display: inline-block;
+    margin: 6px 0 !important;
+}
+.redux-sidebar .redux-group-menu li.active > a, .redux-sidebar .redux-group-menu li:hover > a {
+    background-color: #2271b1 !important;
+    color: #fff !important;
+}
+.redux-container{
+	overflow: visible!important;
+}
+.wp-admin.admin-color-fresh .redux-container-switch .cb-enable.selected, 
+.wp-admin.admin-color-fresh .redux-field-container .ui-buttonset .ui-state-active, 
+.wp-admin.wp-customizer .redux-container-switch .cb-enable.selected, 
+.wp-admin.wp-customizer .redux-field-container .ui-buttonset .ui-state-active {
+	background-color: #2271b1 !important;
+	background-image: none !important;
+	border-color: #2271b1 !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-ms-box-shadow: none !important;
+}
+
+.redux-container-image_select ul.redux-image-select {
+	margin: 0 -15px !important;
+}
+.redux-container-image_select ul.redux-image-select li {
+	padding: 0 15px !important;
+	margin: 0 0 30px !important;
+}
+#kng_theme_options-all_careers_page ul.redux-image-select,
+#kng_theme_options-single_post_layout ul.redux-image-select,
+#kng_theme_options-singe_service_layout ul.redux-image-select,
+#kng_theme_options-singe_portfolio_layout ul.redux-image-select {
+	display: flex;
+	display: -webkit-flex;
+    flex-wrap: wrap;
+}
+
+.wp-admin.admin-color-fresh .redux-container-image_select .redux-image-select-selected img, 
+.wp-admin.wp-customizer .redux-container-image_select .redux-image-select-selected img {
+	border-color: #2271b1 !important;
+	box-shadow: 0 1px 6px #2271b1 !important;
+	-webkit-box-shadow: 0 1px 6px #2271b1 !important;
+	-ms-box-shadow: 0 1px 6px #2271b1 !important;
+}
+.redux-container-color .wp-picker-container {
+	display: inline-block;
+}
+.redux-container-color .color-transparency-check {
+	display: inline-block;
+    margin: 5px 0;
+}
+.term-php .form-field {
+	display: table-row !important;
+}
+.redux-container .redux-container-context-side .redux-main {
+	padding: 20px !important;
+}
+.redux-container .redux-container-media img {
+	max-width: 200px !important;
+	margin-bottom: 10px !important;
+}
+.vc_edit_form_elements .vc_column {
+	padding-top: 30px !important;
+}
+.panel-primary > .panel-heading {
+	background-image: none !important;
+	background-color: #2271b1 !important;
+}
+.description.field-desc {
+	font-style: italic;
+    opacity: 0.4;
+}
+.post-type-post .redux-container .redux-main {
+	min-height: auto;
+}
+.post-type-post .redux-container .redux-sidebar {
+	/*display: none;*/
+}
+.wp-admin [id*="mymetabox_revslider_"], .wp-admin [id^="mymetabox_revslider_"] {
+	display: none;
+}
+
+.kng-dashboard-item i.dashicon {
+	background-color: #2271b1;
+}
+.kng-dashboard-item a {
+	background-color: #2271b1;
+}
+.kng-dashboard-item a:hover, .kng-dashboard-item a:focus {
+	background-color: #4b83fc;
+}
+.kng-dashboard-ticket a {
+	border-color: #2271b1;
+}
+.kng-dashboard-ticket a:hover, .kng-dashboard-ticket a:focus {
+	color: #2271b1;
+}
+.vc_el-container [id*='kng_'] .vc_element-icon, .vc_el-container [id^='kng_'] .vc_element-icon {
+	background-image: url('../images/el-icon.png');
+	background-color: transparent;
+	background-position: center;
+}
+
+.wp-core-ui .swa-ie-dashboard .button {
+	background-color: #2271b1;
+	border-color: #2271b1;
+	box-shadow: 0 1px 0 #2271b1;
+	-webkit-box-shadow: 0 1px 0 #2271b1;
+	-ms-box-shadow: 0 1px 0 #2271b1;
+}
+.wp-core-ui .swa-ie-dashboard .button:hover, .wp-core-ui .swa-ie-dashboard .button:focus {
+	background-color: #4b83fc;
+	border-color: #4b83fc;
+}
+.swa-import-contains .swa-ie-image::before {
+	background-color: rgba(255, 201, 22, 0.8);
+}
+.video-tutorial .dash-deactivate {
+	display: none;
+}
+.techronae_page_theme-options .error.redux-message, .techronae_page_theme-options .updated.redux-notice,
+.techronae-child_page_theme-options .error.redux-message, .techronae-child_page_theme-options .updated.redux-notice,
+.gwp-live-feed-contents.notice.gwp-notice-pro, .swa-delete-demo.button {
+	display: none !important;
+}
+.vc_edit_form_elements .vc_ui-flex-row .vc_col-sm-1\/5 {
+	width: 20%;
+}
+.vc_edit-form-tab.vc_row .kng-col-5 {
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 20%;
+	box-sizing: border-box;
+}
+.redux-main .ui-button-text-only .ui-button-text {
+	padding: 0;
+}
+.kng-image-wrap{
+	border: 1px solid #ddd;
+	padding: 15px;
+}
+.kng-image-wrap + .kng-image-wrap{
+	margin-top: 30px;
+}
+.kng-image-wrap label{
+	font-size: 25px;
+	margin-bottom: 20px;
+	display: block;
+}
+.kng-show-image {
+	max-width: 150px;
+}
+.kng-remove-image{
+	color: red;
+}
+
+.redux-image-select img{
+	position: relative;
+}
+.redux-image-select img:before{
+	content: attr('title');
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	content: white;
+	font-size: 20px;
+	text-transform: capitalize;
+}
+.ui-checkboxradio-icon {
+	display: none!important;
+}
+ 

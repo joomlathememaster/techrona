@@ -1,0 +1,189 @@
+.wpml-ls-legacy-dropdown{
+	width: auto;
+	max-width:100%;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+    line-height: 32px;
+	>ul{
+		position:relative;
+		padding:0;
+		margin:0!important;
+		list-style-type:none;
+		>li >a{
+			line-height: 23px;
+		}
+	}
+	.wpml-ls-item{
+		padding:0;
+		margin:0;
+		list-style-type:none;
+	}
+	
+	a{
+		display:block;
+		text-decoration:none;
+		background-color:#fff;
+		padding:8px 0;
+		line-height: 18px;
+		border: 0;
+		span{
+			vertical-align:middle
+		}
+		&.wpml-ls-item-toggle{
+			position:relative;
+			padding-right:13px;
+			&:after{
+				content:"\e91d";
+				font-family: $kngi_font;
+				vertical-align:middle;
+				display:inline-block;
+				position:absolute;
+				border: 0;
+				right: 0;
+			    top: 18px;
+			    font-size: 9px;
+			    font-weight: 400;
+			    line-height: 1;
+			}
+		}
+		a:focus,
+		a:hover{
+			color:$primary_color;
+			background:#fff;
+		}
+	}
+	.wpml-ls-current-language:hover>a,
+	a:focus,
+	a:hover{
+		color:$primary_color;
+		background: #fff;
+	}
+	.wpml-ls-sub-menu{
+		visibility:hidden;
+		opacity: 0;
+		position:absolute;
+		width: 150px;
+		top: calc(100% + 30px);
+		right:0;
+		left:0;
+		border-top:1px solid #cdcdcd;
+		padding:0;
+		margin:0;
+		list-style-type:none;
+		z-index:101;
+		@include box-shadow(6px 5px 20px -5px  rgba(#333, .3));
+		@include transition(all .3s linear 0s);
+		a{
+			border-style: solid;
+			border-width:0 1px 1px;
+			border-color: $border_color;
+			padding: 5px 15px;
+		}
+	}
+	.wpml-ls-flag{
+		display:inline;
+		vertical-align:middle;
+	}
+	.wpml-ls-flag+span{
+		margin-left:.4em
+	}
+	.wpml-ls-current-language{
+		&:focus,&:hover{
+			.wpml-ls-sub-menu{
+				top: 100%;
+				opacity: 1;
+				visibility:visible;
+			}
+		}
+	}
+	 
+}
+
+.rtl .wpml-ls-legacy-dropdown a.wpml-ls-item-toggle{
+	padding-right:10px;
+	padding-left:calc(10px + 1.4em)
+}
+.rtl .wpml-ls-legacy-dropdown a.wpml-ls-item-toggle:after{
+	right:auto;
+	left:10px
+}
+.rtl .wpml-ls-legacy-dropdown .wpml-ls-flag+span{
+	margin-left:0;
+	margin-right:.4em
+} 
+
+.language-dropdow{
+	>ul{
+		>li.lang-item{
+			position: relative;
+		    z-index: 9999;
+			a{
+				color: #1f1f1f;
+				display: flex;
+			    flex-wrap: wrap;
+			    align-items: center;
+				img{
+					margin-right: .5rem;
+					margin-bottom: 3px;
+				}
+				span{
+					&:after {
+				        content: "\ea99";
+					    font-family: IcoFont;
+			        	speak: none;
+					    font-style: normal;
+					    font-weight: 400;
+					    font-variant: normal;
+					    text-transform: none;
+					    white-space: nowrap;
+				        direction: ltr;
+   	 					line-height: 1;
+ 					    color: $primary_color;
+ 					    margin-left: 2px;
+					}
+				}
+			}
+			ul.lang-submenu{
+				position: absolute;
+				width: 100%;
+				min-width: 100px;
+			    padding: 10px 0;
+			    border-radius: 3px;
+			    background: #FFF;
+		        -webkit-transform-origin: 50% 0;
+    			transform-origin: 50% 0;
+				opacity: 0;
+				visibility: hidden;
+				@include transform(translateY(20px));
+				@include transition(all .3s linear 0s);
+				li{
+					a{
+						color: #333;
+					    font-weight: 300;
+    					font-size: 0.775rem;
+    					display: block;
+    					padding: 0.4rem 0.9rem;
+    					text-transform: capitalize;
+    					&:hover{
+    						color: $link_color_hover;
+    					}					
+    				}
+				}
+			}
+			&:hover{
+				ul.lang-submenu{
+					opacity: 1;
+					visibility: visible;
+					@include transform(translateY(9px));
+				}
+			}
+		}
+	}
+}
+
+.header-top-1{
+	height: 41px;
+}
+ 
+ 

@@ -1,0 +1,96 @@
+
+.main-menu-mobile {
+    .btn-nav-mobile {
+        display: inline-block;
+        height: 21px;
+        width: 22px;
+        cursor: pointer;
+        position: relative;
+        vertical-align: middle;
+        @include transition(all 300ms linear 0ms);
+        &:before, &:after, span {
+            @include transition(all 300ms linear 0ms);
+            content: "";
+            background-color: $second_color;
+            display: block;
+            height: 3px;
+            left: 0;
+            right: 0;
+            // ontop
+            .header-ontop &{
+                background-color: #fff;
+            }
+            // sticky
+            .header-sticky &{
+                background-color: $second_color;
+            }
+        }
+
+        span {
+            margin: 6px 0;
+        }
+        
+        &.opened{
+            &:before {
+                top: 8px;
+                @include transform(rotate(45deg));
+            }
+            &:after {
+                @include transform(rotate(-45deg));
+                top: 8px;
+            }
+            span{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $lg_max){
+	.kng-header-mobile{
+		.header-main-mobile{
+			position: relative;
+			@include box-shadow(0 5px 8px rgba(0, 0, 0, 0.02));
+			background-color: #fff;
+		}
+        .mobile-menu-toggle{
+            .bars{
+                line-height: 1;
+                cursor: pointer;
+                span{
+                    width: 30px;
+                    height: 3px;
+                    background-color: $second_color;
+                    display: block;
+                    @include transition();
+                    &:nth-child(2){
+                        margin: 7px 0;
+                    }
+                }
+                &:hover{
+                    span{
+                        background-color: $primary_color;
+                    }
+                }
+            }
+        }
+	}
+	 
+	.header-mobile-content{
+		@include d-flex();
+		align-items:center;
+	}
+
+	.header-ontop-mobile{
+		.kng-header-mobile .header-top-mobile{
+			background-color: transparent;
+		}
+		.kng-header-mobile:not(.mh-fixed) .header-main-mobile{
+			background-color: transparent;
+		}
+		.kng-header-mobile .header-main-mobile{
+			@include box-shadow(none);
+		}
+	}
+}
+
