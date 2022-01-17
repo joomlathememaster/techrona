@@ -1,4 +1,4 @@
-<?php die('abcd');
+<?php die('abcdc');
 /**
  * Functions and definitions
  *
