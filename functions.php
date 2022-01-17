@@ -1,4 +1,4 @@
-<?php die('aaaaaaa');
+<?php 
 /**
  * Functions and definitions
  *
