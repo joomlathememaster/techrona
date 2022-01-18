@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'techrona';
-  src:  url('fonts/techrona.eot?b3fvbr');
-  src:  url('fonts/techrona.eot?b3fvbr#iefix') format('embedded-opentype'),
-    url('fonts/techrona.ttf?b3fvbr') format('truetype'),
-    url('fonts/techrona.woff?b3fvbr') format('woff'),
-    url('fonts/techrona.svg?b3fvbr#techrona') format('svg');
+  src:  url('fonts/techrona.eot?h1t2aq');
+  src:  url('fonts/techrona.eot?h1t2aq#iefix') format('embedded-opentype'),
+    url('fonts/techrona.ttf?h1t2aq') format('truetype'),
+    url('fonts/techrona.woff?h1t2aq') format('woff'),
+    url('fonts/techrona.svg?h1t2aq#techrona') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -51,6 +51,24 @@
 }
 .icon-facebook:before {
   content: "\e90d";
+}
+.icon-cloud:before {
+  content: "\e915";
+}
+.icon-cyber-security:before {
+  content: "\e917";
+}
+.icon-data-storage:before {
+  content: "\e918";
+}
+.icon-pie-chart:before {
+  content: "\e919";
+}
+.icon-machine-learning:before {
+  content: "\e91a";
+}
+.icon-consulting:before {
+  content: "\e91b";
 }
 .icon-user:before {
   content: "\e90a";

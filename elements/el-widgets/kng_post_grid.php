@@ -131,7 +131,7 @@ kng_add_custom_widget(
                         )
                     ),
                     'condition' => [
-                        'post_type' => ['post','practice']
+                        'post_type' => ['post','service']
                     ]
                 ),
                 array(

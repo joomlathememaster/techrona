@@ -23,10 +23,10 @@ function techrona_post_type_options_register( $metabox ) {
 			'priority' => 'default'
 		) );
 	}
-	if ( ! $metabox->isset_args( 'practice' ) ) {
-		$metabox->set_args( 'practice', array(
-			'opt_name'            => 'practice_option',
-			'display_name'        => esc_html__( 'Practice Options', 'techrona' ),
+	if ( ! $metabox->isset_args( 'service' ) ) {
+		$metabox->set_args( 'service', array(
+			'opt_name'            => 'service_option',
+			'display_name'        => esc_html__( 'Service Options', 'techrona' ),
 			'show_options_object' => false,
 		), array(
 			'context'  => 'advanced',
@@ -61,11 +61,11 @@ function techrona_post_type_options_register( $metabox ) {
 		)
 	) );
   
-	$metabox->add_section( 'practice', array(
+	$metabox->add_section( 'service', array(
 		'title'  => esc_html__( 'Icon', 'techrona' ),
 		'fields' => array(
             array(
-	            'id'       => 'practice_icon',
+	            'id'       => 'service_icon',
 	            'type'     => 'kng_iconpicker',
 	            'title'    => esc_html__( 'Choose the icon', 'techrona' ),
 	            'default'  => 'kngi-auction',

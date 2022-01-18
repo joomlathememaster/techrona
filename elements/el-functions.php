@@ -197,25 +197,29 @@ function techrona_get_grid_layout_options($post_type_name){
                 '1-service' => [
                     'label' => esc_html__( 'Layout 1', 'techrona' ),
                     'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/service-1.jpg'
+                ],
+                '2-service' => [
+                    'label' => esc_html__( 'Layout 2', 'techrona' ),
+                    'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/service-2.jpg'
                 ]      
             ];
             break;
-        case 'practice':
-            $option_layouts = [
-                '1-practice' => [
-                    'label' => esc_html__( 'Layout 1', 'techrona' ),
-                    'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-1-practice.jpg'
-                ],
-                '2-practice' => [
-                    'label' => esc_html__( 'Layout 2', 'techrona' ),
-                    'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-2-practice.jpg'
-                ],
-                '3-practice' => [
-                    'label' => esc_html__( 'Layout 3', 'techrona' ),
-                    'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-3-practice.jpg'
-                ]
-            ];
-            break;
+        // case 'practice':
+        //     $option_layouts = [
+        //         '1-practice' => [
+        //             'label' => esc_html__( 'Layout 1', 'techrona' ),
+        //             'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-1-practice.jpg'
+        //         ],
+        //         '2-practice' => [
+        //             'label' => esc_html__( 'Layout 2', 'techrona' ),
+        //             'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-2-practice.jpg'
+        //         ],
+        //         '3-practice' => [
+        //             'label' => esc_html__( 'Layout 3', 'techrona' ),
+        //             'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-3-practice.jpg'
+        //         ]
+        //     ];
+        //     break;
         default: // post type = post
             $option_layouts = [
                 '1' => [

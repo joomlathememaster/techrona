@@ -128,35 +128,43 @@ if(!function_exists('techrona_get_post_grid')){
             ?>
             <div class="<?php echo trim(implode(' ', [$item_class, $filter_class])); ?>" <?php kng_print_html($style); ?>>
                 <?php switch ($settings['layout']) {
-                    case '1-case':
+                    case '1-service':
+                        $service_icon = !empty(techrona_get_post_format_value($post->ID, 'service_icon')) ? techrona_get_post_format_value($post->ID, 'service_icon') : 'icon-data-storage';     
                         ?>
-                        <div class="kng-item-content kng-transition clearfix">
-                            <div class="kng-featured-wrap relative">
-                                <?php 
-                                    techrona_post_thumbnail([
-                                        'post_id'     => $post->ID, 
-                                        'size'        => $img_size,
-                                        'class'   => 'w-100'
-                                    ]);
-                                ?>
-                                <div class="kng-overlay kng-transition"></div>
-                                <?php if(!empty($settings['show_readmore'])): ?>
+                        <div class="kng-item-content">
+                            <div class="kng-featured-wrap">                     
+                                <?php if(!empty($service_icon)): ?>
+                                    <div class="service-icon">
+                                        <div class="icon-wrap">
+                                            <i class="<?php echo esc_attr($service_icon)?>"></i>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="kng-item-content-inner">
+                                    <h4 class="kng-item-content-title kng-heading">
+                                        <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo get_the_title($post->ID); ?></a>
+                                    </h4>
+                                    <div class="kng-item-content-excerpt">
+                                        <?php
+                                            if(!empty($post->post_excerpt)){
+                                                echo wp_trim_words( $post->post_excerpt, $settings['excerpt_lenght'], $settings['excerpt_more_text'] );
+                                            } else{
+                                                $content = strip_shortcodes( $post->post_content );
+                                                $content = apply_filters( 'the_content', $content );
+                                                $content = str_replace(']]>', ']]&gt;', $content);
+                                                echo wp_trim_words( $content, $settings['excerpt_lenght'], $settings['excerpt_more_text'] );
+                                            }
+                                        ?> 
+                                    </div>
+                                    <?php if(!empty($settings['show_readmore'])): ?>
                                     <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>" class="kng-readmore d-inline-block">
                                         <span class="kng-btn-content">
                                             <?php if(!empty($settings['readmore_text'])): ?>
                                                 <span class="kng-btn-text"><?php echo esc_html($settings['readmore_text']); ?></span>
-                                            <?php endif; ?>
-                                            <span class="kng-btn-icon kngi-arrow-right-solid"></span>
+                                            <?php endif; ?>                                           
                                         </span>
                                     </a>
-                                <?php endif; ?>  
-                                <div class="kng-item-content-inner text-center">
-                                    <h4 class="kng-item-content-title kng-heading">
-                                        <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo get_the_title($post->ID); ?></a>
-                                    </h4>
-                                    <div class="kng-item-category">
-                                        <?php the_terms( $post->ID, 'case-category', '', ' ', '' ); ?>  
-                                    </div>
+                                    <?php endif; ?>          
                                 </div>
                             </div>
                              
