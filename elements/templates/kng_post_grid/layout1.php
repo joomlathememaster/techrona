@@ -1,4 +1,5 @@
 <?php
+
 $html_id = kng_get_element_id($settings);
 $tax     = array();
 $source  = $widget->get_setting('source_'.$settings['post_type'], '');
@@ -24,7 +25,7 @@ $pagination_type            = $widget->get_setting('pagination_type', 'false');
 $pagination_align_cls      = 'justify-content-'.$widget->get_setting('pagination_align', 'center');
 
 $layout = $settings['layout_'.$settings['post_type']];
-
+var_dump($layout);
 $load_more = array(
     'layout'                     => $layout,
     'startPage'                  => $paged,

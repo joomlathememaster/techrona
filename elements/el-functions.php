@@ -168,8 +168,6 @@ function techrona_get_post_grid_layout(){
     $result = [];
     if (!is_array($post_types))
         return $result;
-
-
     foreach ($post_types as $post_type) {
         if (!$post_type instanceof WP_Post_Type)
             continue;
@@ -189,26 +187,17 @@ function techrona_get_post_grid_layout(){
         );
     }
 
-    return $result;
-     
+    return $result;     
 }
 function techrona_get_grid_layout_options($post_type_name){
     $option_layouts = [];
     switch ($post_type_name) {
-        case 'case':
+        case 'service':
             $option_layouts = [
-                '1-case' => [
+                '1-service' => [
                     'label' => esc_html__( 'Layout 1', 'techrona' ),
-                    'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-1-case.jpg'
-                ],
-                '2-case' => [
-                    'label' => esc_html__( 'Layout 1', 'techrona' ),
-                    'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-2-case.jpg'
-                ],
-                '3-case' => [
-                    'label' => esc_html__( 'Layout 3', 'techrona' ),
-                    'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-3-case.jpg'
-                ]
+                    'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/service-1.jpg'
+                ]      
             ];
             break;
         case 'practice':
