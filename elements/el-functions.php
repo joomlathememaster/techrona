@@ -179,8 +179,7 @@ function techrona_get_post_grid_layout(){
             'label'    => sprintf(esc_html__( 'Select Templates of %s', 'techrona' ), $post_type->labels->singular_name),
             'type'     => 'layoutcontrol',
             'default' => '1',
-            'options'  => techrona_get_grid_layout_options($post_type->name),
-            'prefix_class' => 'kng-post-layout-',
+            'options'  => techrona_get_grid_layout_options($post_type->name),         
             'condition' => [
                 'post_type' => [$post_type->name]
             ]

@@ -26743,6 +26743,37 @@ form.login .button {
   color: white;
   line-height: 120px;
 }
+.layout-2-service .kng-featured-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+.layout-2-service .icon-wrap {
+  text-align: center;
+}
+.layout-2-service .icon-wrap i {
+  line-height: 110px;
+  font-size: 60px;
+  color: #222;
+}
+.layout-2-service .icon-wrap, .layout-2-service .servcie-img {
+  min-width: 110px;
+  height: 110px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09);
+  -khtml-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09);
+  -ms-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09);
+  -o-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.09);
+}
+.layout-2-service .kng-item-content-inner {
+  padding-left: 15px;
+}
 .wp-block-button {
   margin-bottom: 20px;
 }

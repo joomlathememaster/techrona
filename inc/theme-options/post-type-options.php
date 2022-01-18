@@ -70,6 +70,12 @@ function techrona_post_type_options_register( $metabox ) {
 	            'title'    => esc_html__( 'Choose the icon', 'techrona' ),
 	            'default'  => 'kngi-auction',
 	        ),
+	        array(
+	            'id'       => 'service_img',
+				'type'     => 'media',
+				'title'    => esc_html__( 'Images ', 'techrona' ),
+				'subtitle' => esc_html__( 'Upload your images', 'techrona' )
+        	)
 		)
 	) );
 
