@@ -470,22 +470,22 @@
         position: relative;
     }
 }
-.redux-page .kng-post-image a{
-    img{
-        @include transform(scale(1,1));
-        backface-visibility: hidden;
-        transform-origin: center center;
-        object-fit: cover;
-        object-position: center;
-        transform-origin: center center;
-        @include transition(all .45s linear);
-    }
-    &:hover{
-        img{
-            @include transform(scale(1.05,1.05));
-        }
-    }
-}
+// .redux-page .kng-post-image a{
+//     img{
+//         @include transform(scale(1,1));
+//         backface-visibility: hidden;
+//         transform-origin: center center;
+//         object-fit: cover;
+//         object-position: center;
+//         transform-origin: center center;
+//         @include transition(all .45s linear);
+//     }
+//     &:hover{
+//         img{
+//             @include transform(scale(1.05,1.05));
+//         }
+//     }
+// }
    
 .post-date{
     font-weight: 300;

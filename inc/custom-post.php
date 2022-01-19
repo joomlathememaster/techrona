@@ -116,6 +116,19 @@ function techrona_add_tax( $taxonomies ) {
 		),
 		'labels'     => array()
 	);
+	$taxonomies['project-category'] = array(
+		'status'     => true,
+		'post_type'  => array( 'project' ),
+		'taxonomy' => esc_html__('Project Categories', 'techrona'),
+		'taxewcomy'   => esc_html__('Project Categories', 'techrona'),
+		'taxonomies' => esc_html__('Project Categories', 'techrona'),
+		'args'       => array(
+			'rewrite'             => array(
+                'slug'       => 'project-category'
+ 		 	),
+		),
+		'labels'     => array()
+	);
 	 
 	return $taxonomies;
 } 

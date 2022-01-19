@@ -36,6 +36,7 @@
 		'icon-map-marker': '&#xe907;',
 		'icon-volume-control-phone': '&#xe901;',
 		'icon-caret-down': '&#xe900;',
+		'icon-full-screen': '&#xe91c;',
 		'icon-paper-plane': '&#xe906;',
 		'icon-email': '&#xe904;',
 		'icon-phone-mes': '&#xe905;',

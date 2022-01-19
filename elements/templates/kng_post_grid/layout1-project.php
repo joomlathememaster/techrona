@@ -99,7 +99,7 @@ if( !empty($settings['gap']) )
     <div <?php kng_print_html($widget->get_render_attribute_string('grid')); ?>>
         <?php 
             $load_more['tax'] = $tax;  
-            techrona_get_post_grid($posts, $load_more);
+            techrona_get_project_grid($posts, $load_more);
         ?>
         <div class="kng-grid-overlay"></div>
     </div>

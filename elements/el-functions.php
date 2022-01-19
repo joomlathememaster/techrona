@@ -203,22 +203,22 @@ function techrona_get_grid_layout_options($post_type_name){
                 ]      
             ];
             break;
-        // case 'practice':
-        //     $option_layouts = [
-        //         '1-practice' => [
-        //             'label' => esc_html__( 'Layout 1', 'techrona' ),
-        //             'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-1-practice.jpg'
-        //         ],
-        //         '2-practice' => [
-        //             'label' => esc_html__( 'Layout 2', 'techrona' ),
-        //             'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-2-practice.jpg'
-        //         ],
-        //         '3-practice' => [
-        //             'label' => esc_html__( 'Layout 3', 'techrona' ),
-        //             'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-3-practice.jpg'
-        //         ]
-        //     ];
-        //     break;
+        case 'project':
+            $option_layouts = [
+                '1-project' => [
+                    'label' => esc_html__( 'Layout 1', 'techrona' ),
+                    'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-1-practice.jpg'
+                ]
+                // '2-practice' => [
+                //     'label' => esc_html__( 'Layout 2', 'techrona' ),
+                //     'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-2-practice.jpg'
+                // ],
+                // '3-practice' => [
+                //     'label' => esc_html__( 'Layout 3', 'techrona' ),
+                //     'image' => get_template_directory_uri() . '/elements/el-widgets/layouts/kng_post_grid-3-practice.jpg'
+                // ]
+            ];
+            break;
         default: // post type = post
             $option_layouts = [
                 '1' => [

@@ -25,7 +25,6 @@ $pagination_type            = $widget->get_setting('pagination_type', 'false');
 $pagination_align_cls      = 'justify-content-'.$widget->get_setting('pagination_align', 'center');
 
 $layout = $settings['layout_'.$settings['post_type']];
-var_dump($layout);
 $load_more = array(
     'layout'                     => $layout,
     'startPage'                  => $paged,

@@ -177,19 +177,24 @@ if(!function_exists('techrona_get_post_grid')){
                         // var_dump($service_img);
                         ?>
                         <div class="kng-item-content">
-                            <div class="kng-featured-wrap">                     
-                                <?php if(!empty($service_img['thumbnail'])): ?>
-                                    <div class="servcie-img">
-                                        <img src="<?php echo esc_html( $service_img['thumbnail'] ) ?>" alt="">
-                                    </div>
-                                <?php else: ?>
-                                    <div class="service-icon">
-                                        <div class="icon-wrap">
-                                            <i class="<?php echo esc_attr($service_icon)?>"></i>
+                            <div class="kng-featured-wrap"> 
+                                <div class="icon-box">
+                                    <div class="icon-box-wrap">
+                                        <?php if(!empty($service_img['thumbnail'])): ?>
+                                        <div class="icon-layer" style="background-image: url(<?php echo get_template_directory_uri().'/assets/images/icon-5.png' ?>);"></div>          
+                                        <div class="servcie-img">                                                      
+                                            <img src="<?php echo esc_html( $service_img['thumbnail'] ) ?>" alt="">
                                         </div>
+                                        <?php else: ?>
+                                            <div class="icon-layer" style="background-image: url(<?php echo get_template_directory_uri().'/assets/images/icon-5.png' ?>);"></div>
+                                            <div class="service-icon">                                        
+                                                <div class="icon-wrap">                                                    
+                                                    <i class="<?php echo esc_attr($service_icon)?>"></i>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
-                                <?php endif; ?>
-
+                                </div>                   
                                 <div class="kng-item-content-inner">
                                     <h4 class="kng-item-content-title kng-heading">
                                         <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo get_the_title($post->ID); ?></a>
@@ -210,6 +215,7 @@ if(!function_exists('techrona_get_post_grid')){
                                     <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>" class="kng-readmore d-inline-block">
                                         <span class="kng-btn-content">
                                             <?php if(!empty($settings['readmore_text'])): ?>
+                                                <i class="readmore-icon icon-chevron-right"></i>
                                                 <span class="kng-btn-text"><?php echo esc_html($settings['readmore_text']); ?></span>
                                             <?php endif; ?>                                           
                                         </span>
@@ -221,50 +227,15 @@ if(!function_exists('techrona_get_post_grid')){
                         </div>
                         <?php 
                         break;
-                    case '1-practice':
+                    case '1-project':
                         ?>
-                        <div class="kng-item-content kng-transition clearfix">
-                            <div class="kng-featured-wrap relative">
-                                <?php 
-                                techrona_post_thumbnail([
+                        <div class="kng-item-content">
+                            <?php techrona_post_thumbnail([
                                     'post_id'     => $post->ID, 
                                     'size'        => $img_size,
                                     'class'   => 'w-100'
-                                ]);   
-                                $practice_icon = get_post_meta($post->ID,'practice_icon', true ); 
-                                if(!empty($practice_icon)): ?>
-                                    <div class="icon"><span class="<?php echo esc_attr($practice_icon)?>"></span></div>
-                                <?php endif; ?>
-                            </div>
-                            <div class="kng-item-content-inner">
-                                <h4 class="kng-item-content-title kng-heading">
-                                    <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo get_the_title($post->ID); ?></a>
-                                </h4>
-                                <?php if( $settings['show_excerpt'] == 'yes' && (int)$settings['excerpt_lenght'] > 0): ?>
-                                    <div class="kng-item-content-excerpt">
-                                        <?php
-                                            if(!empty($post->post_excerpt)){
-                                                echo wp_trim_words( $post->post_excerpt, $settings['excerpt_lenght'], $settings['excerpt_more_text'] );
-                                            } else{
-                                                $content = strip_shortcodes( $post->post_content );
-                                                $content = apply_filters( 'the_content', $content );
-                                                $content = str_replace(']]>', ']]&gt;', $content);
-                                                echo wp_trim_words( $content, $settings['excerpt_lenght'], $settings['excerpt_more_text'] );
-                                            }
-                                        ?> 
-                                    </div>
-                                <?php endif; ?>
-                                <?php if(!empty($settings['show_readmore'])): ?>
-                                    <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>" class="kng-readmore d-inline-block">
-                                        <span class="kng-btn-content">
-                                            <?php if(!empty($settings['readmore_text'])): ?>
-                                                <span class="kng-btn-text"><?php echo esc_html($settings['readmore_text']); ?></span>
-                                            <?php endif; ?>
-                                            <span class="kng-btn-icon kngi-arrow-right-solid"></span>
-                                        </span>
-                                    </a>
-                                <?php endif; ?>
-                            </div> 
+                                ]); ?>
+                            <h4 class="kng-item-content-title kng-heading"> <?php echo get_the_title($post->ID); ?> </h4>
                         </div>
                         <?php 
                         break;
@@ -653,5 +624,69 @@ if(!function_exists('techrona_load_more_post_grid')){
         die;
     }
 }
+if(!function_exists('techrona_get_project_grid')){
+    function techrona_get_project_grid($posts = [], $settings = [], $args = []){
+        
+        if(empty($posts) || !is_array($posts) || empty($settings) || !is_array($settings)){
+            return false;
+        }
 
- 
+        extract($settings);
+        $settings['gap_extra'] = empty($settings['gap_extra']) ? '0' : $settings['gap_extra'];
+        //style
+        $style = 'style="';
+
+        if(isset($settings['masonry_mode']) && $settings['gap'] !== 0){
+            $style .= 'padding:'.($settings['gap']/2).'px;';
+        }
+        if($settings['gap_extra']!== '0'){
+            $style .= 'margin-bottom:'.$settings['gap_extra'].'px;';
+        }
+        $style .= '"';   
+       
+        foreach ($posts as $key => $post):   
+            $filter_class = kng_get_term_of_post_to_class($post->ID, array_unique($tax));            
+            $item_class = 'kng-grid-item col-4';
+            $img_size = '370x450';
+            if ( $key == 3 || $key == 4) {
+                $item_class = 'kng-grid-item col-6';
+                $img_size = '570x390';
+            }
+            ?>
+            <div class="<?php echo trim(implode(' ', [$item_class, $filter_class])); ?>" <?php kng_print_html($style); ?>>           
+                <div class="kng-item-content kng-transition clearfix">
+                    <div class="img-layer">
+                        <a class="img-button" href="#">
+                            <i class="icon-full-screen"></i>
+                        </a>
+                    </div>
+                    <div class="kng-featured-wrap empty-none"><?php 
+                    if (has_post_thumbnail($post->ID)) {
+                        techrona_post_media([
+                            'post_id'     => $post->ID, 
+                            'size'        => $img_size,
+                            'wrap_class'  => '',
+                            'img_class'   => 'w-100',
+                        ]);
+                    }else{ ?>
+                        <img src="<?php echo get_template_directory_uri().'/assets/images/'.$img_size.'.png' ?>">
+                    <?php }                       
+                    ?>                        
+                    </div>
+                    <div class="kng-item-content-inner">
+                        <div class="kng-item-content-title kng-heading">
+                            <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo get_the_title($post->ID); ?></a>
+                        </div>
+                        <?php techrona_post_category([
+                            'taxo'       => 'project-category',        
+                            'post_id'    => $post->ID
+                        ]) ?>                             
+                    </div>
+                </div>   
+            </div>
+        <?php
+        endforeach;
+        if( isset($masonry_mode) && $masonry_mode == 'masonry')
+            echo '<div class="kng-grid-sizer"></div>' ;
+    }
+} 

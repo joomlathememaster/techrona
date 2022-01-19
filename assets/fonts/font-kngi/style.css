@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'techrona';
-  src:  url('fonts/techrona.eot?h1t2aq');
-  src:  url('fonts/techrona.eot?h1t2aq#iefix') format('embedded-opentype'),
-    url('fonts/techrona.ttf?h1t2aq') format('truetype'),
-    url('fonts/techrona.woff?h1t2aq') format('woff'),
-    url('fonts/techrona.svg?h1t2aq#techrona') format('svg');
+  src:  url('fonts/techrona.eot?e5m96t');
+  src:  url('fonts/techrona.eot?e5m96t#iefix') format('embedded-opentype'),
+    url('fonts/techrona.ttf?e5m96t') format('truetype'),
+    url('fonts/techrona.woff?e5m96t') format('woff'),
+    url('fonts/techrona.svg?e5m96t#techrona') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -93,6 +93,9 @@
 }
 .icon-caret-down:before {
   content: "\e900";
+}
+.icon-full-screen:before {
+  content: "\e91c";
 }
 .icon-paper-plane:before {
   content: "\e906";
